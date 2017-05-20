@@ -35,8 +35,6 @@ $(document).ready(function() {
       // Si el usuario cargo algo hago esto, caso contrario..
       if ( (noticia.titulo && noticia.cuerpo && noticia.imagen) !== null) {
         noticias.push(noticia);
-        console.log("hola");
-
 
         var containerEstado = $("#estado");
         noticiaExitosa = document.createElement("h3");
@@ -52,16 +50,20 @@ $(document).ready(function() {
     }
 
     function mostrarNoticia() {
+      //Creo variable wrapper para contener todas los article noticias
+      var wrapper = $("#wrapper");
+
 
       // Agarramos el container de noticias (fijate que metodo usamos)
       if (noticias.length > 0) {
 
 
         // capturo el elemento con ID "noticias" (fijate en el HTML)
-        var containerNoticias = $("#noticias");
+        var containerNoticias = $("article");
 
 
         // Creamos un par de variables para el titulo y parrafo
+        var article;
         var tituloConFormato;
         var parrafoConFormato;
         var imagenConFormato;
@@ -72,6 +74,7 @@ $(document).ready(function() {
         for (var i = 0; i < noticias.length; i++) {
 
           // Creamos los elementos y los asignamos
+          article = document.createElement("article");
           tituloConFormato = document.createElement("h2");
           parrafoConFormato = document.createElement("p");
           imagenConFormato = document.createElement("img");
@@ -83,9 +86,10 @@ $(document).ready(function() {
           imagenConFormato.src = noticias[i].imagen;
 
           // Los agrego al DOM
-          containerNoticias.append(tituloConFormato);
-          containerNoticias.append(parrafoConFormato);
-          containerNoticias.append(imagenConFormato);
+          article.append(tituloConFormato);
+          article.append(parrafoConFormato);
+          article.append(imagenConFormato);
+          wrapper.append(article);
         }
 
         // Vaciamos el array al finalizar (proba que pasa si sacas esto)

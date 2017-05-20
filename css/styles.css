@@ -2,12 +2,12 @@ body {
   font-family: sans-serif;
 }
 
-#noticias {
+/*#wrapper {
   border: 1px solid #222;
   height: auto;
   border-radius: 2px;
   padding: 5px;
-}
+}*/
 
 .main-title {
   text-align: center;

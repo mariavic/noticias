@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Intro al DOM</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div id="estado">
+      <!-- Aca se muestran los estados de cargas -->
+    </div>
+  </header>
+  <h1 class="main-title">Mis Noticias</h1>
+  <form>
+    <input type="text" placeholder="Título de la nota" id="titulo1"><br>
+    <input type="text" placeholder="Link nota" id="imagen2"><br>
+    <textarea placeholder="Cuerpo de la noticia" id="cuerpo2"></textarea><br>
+    <input type="button" id="agregarNota" value="Agregar noticia">
+    <input type="button" id="mostrarNota" value="Mostrar noticias">
+  </form>
+
+  <div id="noticias">
+    <!-- Las noticias se van a ir agregando aca -->
+  </div>
+
+  <!-- Cargamos Nuestro JavaScript -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

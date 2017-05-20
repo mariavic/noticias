@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+}
+
+#noticias {
+  border: 1px solid #222;
+  height: auto;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 4em;
+}
+
+form input, form textarea {
+	font-family: "Roboto", sans-serif;
+	color: #000;
+	margin-bottom: 10px;
+	width: 400px !important;
+}
+textarea {   
+    height: 200px !important;
+}
+.green {
+	background: green;
+	color: #fff;
+}
